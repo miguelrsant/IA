@@ -2,7 +2,8 @@ node_modules
 npm-debug.log
 .next
 .git
-.env
+.env.build
+.env.dev
 .venv
 .pdm-python
 __pycache__
