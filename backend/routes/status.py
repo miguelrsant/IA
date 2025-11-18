@@ -11,6 +11,7 @@ status_bp = Blueprint("status", __name__, url_prefix="/status")
 @status_bp.get("/")
 def index():
     return {
+        "backend": "ok",
         "db": {
             "version": get_version(),
             "max_connections": get_max_connections(),

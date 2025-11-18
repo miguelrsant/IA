@@ -1,54 +1,36 @@
-import psycopg2
 import os
 from dotenv import load_dotenv
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from sqlalchemy import text
 
-load_dotenv(dotenv_path="/app/.env")
+load_dotenv()
 
-DB_USER = os.getenv("POSTGRES_USER")
-DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-DB_NAME = os.getenv("POSTGRES_DB")
-DB_HOST = os.getenv("POSTGRES_HOST")
-DB_PORT = os.getenv("POSTGRES_PORT")
+db = SQLAlchemy()
+migrate = Migrate()
 
 
-def get_connection():
-    try:
-        conn = psycopg2.connect(
-            dbname=DB_NAME,
-            user=DB_USER,
-            password=DB_PASSWORD,
-            host=DB_HOST,
-            port=DB_PORT
-        )
-        return conn
-    except psycopg2.Error as e:
-        print(f"Erro ao conectar ao banco de dados: {e}")
-        return None
+def init_database(app):
+    database_url = os.getenv("DATABASE_URL")
+
+    app.config["SQLALCHEMY_DATABASE_URI"] = database_url
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+    db.init_app(app)
+    migrate.init_app(app, db)
 
 
 def execute_query(query, params=None, fetch_results=True):
-    conn = get_connection()
-    if conn is None:
-        return None
+    params = params or {}
 
-    try:
-        with conn:
-            with conn.cursor() as cur:
-                cur.execute(query, params)
+    with db.engine.connect() as conn:
+        result = conn.execute(text(query), params)
 
-                if fetch_results:
-                    result_list = cur.fetchall()
-                    if result_list and isinstance(result_list, list) and len(result_list) > 0:
-                        return result_list[0][0]
-                    else:
-                        return None
+        # Se for uma query SELECT, busca os resultados
+        if fetch_results and query.strip().upper().startswith("SELECT") or query.strip().upper().startswith("SHOW"):
+            return result.fetchall()
 
-                return True
-
-    except psycopg2.Error as e:
-        print(f"Erro durante a execução da query: {e}")
-        return False
-
-    finally:
-        if conn:
-            conn.close()
+        # Para INSERT/UPDATE/DELETE, faz o commit e retorna o número de linhas afetadas
+        else:
+            conn.commit()
+            return result.rowcount

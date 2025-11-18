@@ -8,13 +8,40 @@ kill-ports:
 	-docker stop $$(docker ps -q --filter "publish=3000") 2>/dev/null || true
 	-docker stop $$(docker ps -q --filter "publish=8000") 2>/dev/null || true
 	-docker stop $$(docker ps -q --filter "publish=5432") 2>/dev/null || true
+
+
+# =====================================
+# DEV MODE
+# =====================================
 dev: kill-ports
 	cp .env.dev .env
-	docker compose -f 'docker-compose.yml' up -d --build 'db' & \
-	cd backend && pdm run gunicorn main:app -b 0.0.0.0:8000 & \
-	cd frontend && npm run dev 
+
+	# Sobe o banco
+	docker compose -f docker-compose.yml up -d --build db
+
+	# Espera o Postgres responder antes das migrations
+	@echo "⏳ Waiting for Postgres..."
+	@sleep 4
+
+	# Roda as migrations automaticamente
+	@echo "📦 Running migrations..."
+	cd backend && flask --app main.py db upgrade -d migrations
+
+	# Inicia o backend
+	@echo "🚀 Starting backend..."
+	cd backend && pdm run gunicorn main:app -b 0.0.0.0:8000 &
+
+	# Inicia o frontend
+	@echo "🎨 Starting frontend..."
+	cd frontend && npm run dev
+
+
+# =====================================
+# BUILD MODE (Produção)
+# =====================================
 build: kill-ports
-	make kill-ports
 	cp .env.build .env
-	docker compose build --no-cache & \
+	docker compose down --remove-orphans
+	docker compose build --no-cache
 	docker compose up -d
+
