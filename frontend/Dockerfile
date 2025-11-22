@@ -24,6 +24,7 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/next.config.ts ./
 COPY --from=builder /app/tsconfig.json ./
 COPY --from=builder /app/next-env.d.ts ./
+COPY --from=builder /app/public ./public
 
 RUN npm install --only=production
 

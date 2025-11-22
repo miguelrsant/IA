@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: #8191A4;
+}
+
+h1 {
+  color: #F8FAFC;
+}
+
+@keyframes rotacaoInfinita {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: #0C0F14;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(3, 193, 245, 0.1764705882), rgba(3, 193, 245, 0.1176470588), rgba(3, 193, 245, 0.0549019608), rgba(3, 193, 245, 0.0274509804), rgba(3, 193, 245, 0), rgba(3, 193, 245, 0), rgba(3, 193, 245, 0));
+}
+.home .home-page {
+  margin-bottom: 10px;
+  width: 95%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home .home-page .business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #252B37;
+}
+.home .home-page .business img {
+  width: clamp(15px, 2vw, 20px);
+  animation: rotacaoInfinita 5s linear infinite;
+}
+.home .home-page .business p {
+  margin-left: 5px;
+  font-size: clamp(8px, 2vw, 14px);
+}
+.home .home-page .texto-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  text-align: center;
+}
+.home .home-page .texto-home .taylor-principal {
+  font-size: clamp(35px, 8vw, 65px);
+  background-image: linear-gradient(to right, #03C2F5, #13B1A3);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.home .home-page .texto-home .taylor-secundario {
+  margin: 5px 0px;
+  font-size: clamp(25px, 8vw, 60px);
+  width: 100%;
+  max-width: 800px;
+}
+.home .home-page .texto-home .taylor-paragrafo {
+  padding: 8px 0px;
+  width: 100%;
+  max-width: 650px;
+  font-size: clamp(10px, 3vw, 20px);
+}
+.home .btn-home {
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: clamp(25px, 7vh, 35px);
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #03C2F5, #13B1A3);
+  transition: 2s ease;
+  margin: 5px 0px;
+}
+.home .btn-home p {
+  font-size: clamp(8px, 3vw, 12px);
+  padding: 0px 8px;
+  color: black;
+}
+.home .btn-home:hover {
+  transform: scale(1.1);
+}
+.home .vantagens {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 800px;
+}
+.home .vantagens .cards-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0px;
+}
+.home .vantagens .cards-home .cards-h1 {
+  font-size: clamp(15px, 5.5vw, 35px);
+  background-image: linear-gradient(to right, #03C2F5, #13B1A3);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.home .vantagens .cards-home .cards-p {
+  font-size: clamp(10px, 2.5vw, 17px);
+}/*# sourceMappingURL=index.css.map */
