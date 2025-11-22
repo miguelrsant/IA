@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className="taylor-secundario">Transforme dados em decisões estratégicas</h1>
           <p className="taylor-paragrafo">Plataforma avançada de automação operacional e análise inteligente com IA. Automatize rotinas, gere insights e acompanhe seu negócio em tempo real.</p>
         </div>
-        <div className="btn-home"><p>Começar agora →</p></div>
+        <a href="/waitingline" style={{textDecoration: "none"}} ><div className="btn-home"><p>Começar agora →</p></div></a>
       </div>
       <div className="vantagens">
         <div className="cards-home">

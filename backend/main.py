@@ -25,6 +25,9 @@ def create_app():
     from routes.auth.singin import singin_bp
     app.register_blueprint(singin_bp)
 
+    from routes.waitingline import waitingline_bp
+    app.register_blueprint(waitingline_bp)
+
     return app
 
 
