@@ -3,7 +3,7 @@
   padding: 5% 0;
   max-width: 1440px;
   width: 100vw;
-  min-height: 430px;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@
   padding: 6px 10px;
   border: 1px solid;
   border-radius: 20px;
-  border-color: #252B37;
+  border-color: #252b37;
 }
 .home .home-page .business img {
   width: clamp(15px, 2vw, 20px);
@@ -92,9 +92,9 @@
   width: 100vw;
   max-width: 1440px;
   min-height: 700px;
-  background-color: #0E1116;
+  background-color: #0e1116;
   padding: 2% 0px;
-  border-top: 5px solid #14171E;
+  border-top: 5px solid #14171e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,8 +135,8 @@
   padding-left: 15px;
   min-height: 210px;
   flex: 1 1 400px;
-  background-color: #0D0F15;
-  border: 2px solid #252B37;
+  background-color: #0d0f15;
+  border: 2px solid #252b37;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@
   border-radius: 5px;
 }
 .cards-escolher .card-escolher .text-card-escolher h2 {
-  margin-top: 15PX;
+  margin-top: 15px;
   font-size: clamp(20px, 5vw, 25px);
 }
 .cards-escolher .card-escolher .text-card-escolher p {
@@ -164,8 +164,8 @@
   width: 100vw;
   max-width: 1440px;
   min-height: 700px;
-  background-color: #0B0E13;
-  border-top: 5px solid #14171E;
+  background-color: #0b0e13;
+  border-top: 5px solid #14171e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,8 +206,8 @@
   flex: 1 1 300px;
   min-height: 130px;
   border-radius: 7px;
-  border: 2px solid #252B37;
-  background-color: #14181F;
+  border: 2px solid #252b37;
+  background-color: #14181f;
   padding: 1.5%;
   display: flex;
   flex-direction: column;
@@ -231,7 +231,7 @@
 .card-principal-impulsionam {
   width: 90%;
   max-width: 950px;
-  border: 2px solid #252B37;
+  border: 2px solid #252b37;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -248,7 +248,7 @@
   min-height: 80px;
 }
 .text-card-p-impulsionam h2 {
-  color: #04B9FF;
+  color: #04b9ff;
   font-size: clamp(20px, 6vw, 30px);
 }
 .text-card-p-impulsionam p {
@@ -260,8 +260,8 @@
   width: 100vw;
   max-width: 1440px;
   min-height: 700px;
-  background-color: #0B0E13;
-  border-top: 5px solid #14171E;
+  background-color: #0b0e13;
+  border-top: 5px solid #14171e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,8 +301,8 @@
 
 .card-pilar {
   min-height: 300px;
-  border: 2px solid #252B37;
-  background-color: #14181F;
+  border: 2px solid #252b37;
+  background-color: #14181f;
   border-radius: 7px;
   flex: 1 1 290px;
   padding: 20px;
@@ -339,7 +339,7 @@
 .vantagem-pilar .bolinha-pilar {
   width: 5px;
   height: 5px;
-  background-color: #00BFFF;
+  background-color: #00bfff;
   margin-right: 6px;
   border-radius: 100%;
 }
@@ -350,21 +350,21 @@
 .negocio {
   width: 100vw;
   max-width: 1440px;
-  background-color: #0B0E13;
-  border-top: 5px solid #14171E;
+  background-color: #0b0e13;
+  border-top: 5px solid #14171e;
 }
 .negocio .gradiente-negocio {
   padding: 5% 7%;
   height: 90%;
-  background-image: linear-gradient(to right, #213f47, #0B2125);
+  background-image: linear-gradient(to right, #213f47, #0b2125);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .negocio footer {
   height: 60px;
-  border-top: 2px solid #14171E;
-  background-color: #0B0E13;
+  border-top: 2px solid #14171e;
+  background-color: #0b0e13;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -376,6 +376,9 @@
   margin-top: 7px;
   font-size: clamp(10px, 3vw, 13px);
 }
+.negocio footer p a:hover {
+  animation: letterExpandMin 3s ease-in-out infinite;
+}
 
 .cartao-negocio {
   width: 100%;
@@ -385,7 +388,7 @@
   min-height: 260px;
   border-radius: 15px;
   background-color: rgba(15, 28, 35, 0.6705882353);
-  border: 2px solid #252B37;
+  border: 2px solid #252b37;
   padding: 2% 0px;
   display: flex;
   justify-content: center;
@@ -421,15 +424,17 @@
 }
 
 p {
-  color: #8191A4;
+  color: #8191a4;
 }
 
-h1, h2, h3 {
-  color: #F8FAFC;
+h1,
+h2,
+h3 {
+  color: #f8fafc;
 }
 
 .text-gradient {
-  background-image: linear-gradient(90deg, #03C2F5, #13B1A3, #03C2F5, #13B1A3, #03C2F5);
+  background-image: linear-gradient(90deg, #03c2f5, #13b1a3, #03c2f5, #13b1a3, #03c2f5);
   background-size: 300%; /* deixa mais dramático */
   background-position: 0% 50%;
   background-clip: text;
@@ -458,6 +463,17 @@ h1, h2, h3 {
     letter-spacing: 0px;
   }
 }
+@keyframes letterExpandMin {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
 .all-content {
   display: flex;
   flex-direction: column;
@@ -471,11 +487,11 @@ html {
 }
 
 body {
-  background-color: #0C0F14;
+  background-color: #0c0f14;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #0C1116;
+  background-color: #0c1116;
 }
 
 ::-webkit-scrollbar {
@@ -484,13 +500,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #252B37;
+  background: #252b37;
   border-radius: 10px;
   -webkit-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
 
-.cursor-outer, .cursor-dot {
+.cursor-outer,
+.cursor-dot {
   position: fixed;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -517,7 +534,7 @@ body {
   text-align: center;
   height: clamp(25px, 7vh, 35px);
   border-radius: 5px;
-  background-color: #00BFFF;
+  background-color: #00bfff;
   box-shadow: 0 0 20px 5px rgba(0, 191, 255, 0.3294117647);
   transition: 2s ease;
   margin: 5px 0px;
@@ -536,7 +553,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #0C1015;
+  background-color: #0c1015;
   height: 100%;
   width: 100%;
   display: flex;

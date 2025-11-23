@@ -4,96 +4,106 @@
 @use "home-page/pilares.scss";
 @use "home-page/negocio.scss";
 
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-
-p{
-    color: #8191A4;
+p {
+  color: #8191a4;
 }
 
-h1, h2, h3{
-    color: #F8FAFC;
+h1,
+h2,
+h3 {
+  color: #f8fafc;
 }
 
 .text-gradient {
-    background-image: linear-gradient(
-        90deg,
-        #03C2F5,
-        #13B1A3,
-        #03C2F5,
-        #13B1A3,
-        #03C2F5
-    );
-    background-size: 300%;  /* deixa mais dramático */
-    background-position: 0% 50%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block;
+  background-image: linear-gradient(
+    90deg,
+    #03c2f5,
+    #13b1a3,
+    #03c2f5,
+    #13b1a3,
+    #03c2f5
+  );
+  background-size: 300%; /* deixa mais dramático */
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
 
-    animation: gradientMove 6s linear infinite;
+  animation: gradientMove 6s linear infinite;
 }
 
 @keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 300% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
 }
 
 @keyframes letterExpand {
-    0% {
-        letter-spacing: 0px;
-    }
-    50% {
-        letter-spacing: 5px;
-    }
-    100% {
-        letter-spacing: 0px;
-    }
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 5px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
 }
 
+@keyframes letterExpandMin {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
 
-.all-content{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
+.all-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 html {
   overflow-y: scroll; /* Mantém espaço do scroll fixo */
 }
 
 body {
-  background-color: #0C0F14;
+  background-color: #0c0f14;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #0C1116;
+  background-color: #0c1116;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    background: #2b2b2b;
+  width: 8px;
+  background: #2b2b2b;
 }
 ::-webkit-scrollbar-thumb {
-    background: #252B37;
-    border-radius: 10px;
-    transition: background 0.2s ease;
+  background: #252b37;
+  border-radius: 10px;
+  transition: background 0.2s ease;
 }
 
-
-.cursor-outer, .cursor-dot {
+.cursor-outer,
+.cursor-dot {
   position: fixed;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -113,7 +123,7 @@ body {
   }
 }
 
-.btn-comecar{
+.btn-comecar {
   padding: 4px 8px;
   display: flex;
   justify-content: center;
@@ -121,48 +131,47 @@ body {
   text-align: center;
   height: clamp(25px, 7vh, 35px);
   border-radius: 5px;
-  background-color: #00BFFF;
+  background-color: #00bfff;
   box-shadow: 0 0 20px 5px #00bfff54;
   transition: 2s ease;
   margin: 5px 0px;
 
   p {
-      font-size: clamp(8px, 3vw, 12px);
-      padding: 0px 8px;
-      color: black;
+    font-size: clamp(8px, 3vw, 12px);
+    padding: 0px 8px;
+    color: black;
   }
 }
 
-.btn-comecar:hover{
-    transform: scale(1.1);
+.btn-comecar:hover {
+  transform: scale(1.1);
 }
 
-.loging-page{
+.loging-page {
   position: absolute;
-   top: 0;
-   left: 0;
-   background-color: #0C1015;
-   height: 100%;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: #0c1015;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.loding-svg{
+.loding-svg {
   height: 100px;
 
-  path{
+  path {
     stroke: #ffffff00;
     stroke-width: 0.5px;
-    animation:  draw 60s ease;
+    animation: draw 60s ease;
     animation-delay: 0.3s;
     stroke-dasharray: 4500;
   }
-  g{
+  g {
     stroke: #ffffff00;
-    animation:  draw 60s ease;
+    animation: draw 60s ease;
     stroke-dasharray: 4500;
     animation-delay: 1s;
     circle {

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 
-import '../public/styles/index.css' 
+import "../public/styles/index.css";
 
 const metadata: Metadata = {
   title: "Taylor: Business Super Intelligence Platform",
-  description: "TAYLOR é uma plataforma avançada de automação operacional e análise inteligente, transformando dados em decisões estratégicas para empresas de todos os setores.",
+  description:
+    "TAYLOR é uma plataforma avançada de automação operacional e análise inteligente, transformando dados em decisões estratégicas para empresas de todos os setores.",
 };
 
 export default function RootLayout({
@@ -12,16 +13,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html lang="pt-br"
-    data-lt-installed="true">
+    <html lang="pt-br" data-lt-installed="true">
       <head>
-        <link rel="shortcut icon" href="./svg/taylor-logo-white.svg"/>
+        <link rel="shortcut icon" href="./svg/taylor-logo-white.svg" />
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

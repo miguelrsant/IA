@@ -1,4 +1,4 @@
-export default function Page() { 
+export default function Page() {
   return (
     <div className="waitingline">
       <h1 className="waiting-taylor">TAYLOR</h1>

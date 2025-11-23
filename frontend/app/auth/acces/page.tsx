@@ -1,7 +1,7 @@
-export default function Page() { 
+export default function Page() {
   return (
     <div>
-        <h1>Acess</h1>
+      <h1>Acess</h1>
     </div>
   );
 }

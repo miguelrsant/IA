@@ -1,70 +1,72 @@
-.negocio{
-    width: 100vw;
-    max-width: 1440px;
-    background-color: #0B0E13;
-    border-top: 5px solid #14171E;
-    
-    .gradiente-negocio{
-        padding: 5% 7%;
-        height: 90%;
-        background-image: linear-gradient(to right, #213f47, #0B2125);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.negocio {
+  width: 100vw;
+  max-width: 1440px;
+  background-color: #0b0e13;
+  border-top: 5px solid #14171e;
 
-    footer {
-        height: 60px;
-        border-top: 2px solid #14171E;
-        background-color: #0B0E13;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        display: flex;
-        flex-direction: column;
-
-        p{
-            margin-top: 7px;
-            font-size: clamp(10px, 3vw, 13px);
-        }
-    }
-}
-
-.cartao-negocio{
-    width: 100%;
-    max-width: 750px;
-    backdrop-filter: blur(10px);
-    min-height: 260px;
-    border-radius: 15px;
-    background-color: #0f1c23ab;
-    border: 2px solid #252B37;
-    padding: 2% 0px;
+  .gradiente-negocio {
+    padding: 5% 7%;
+    height: 90%;
+    background-image: linear-gradient(to right, #213f47, #0b2125);
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  footer {
+    height: 60px;
+    border-top: 2px solid #14171e;
+    background-color: #0b0e13;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin-top: 7px;
+      font-size: clamp(10px, 3vw, 13px);
+      a:hover {
+        animation: letterExpandMin 3s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+.cartao-negocio {
+  width: 100%;
+  max-width: 750px;
+  backdrop-filter: blur(10px);
+  min-height: 260px;
+  border-radius: 15px;
+  background-color: #0f1c23ab;
+  border: 2px solid #252b37;
+  padding: 2% 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  .text-cartao-negocio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-
-    .text-cartao-negocio{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        h1 {
-            width: 100%;
-            max-width: 700px;
-            font-size: clamp(18px, 6vw, 40px);
-        }
-        p {
-            width: 90%;
-            margin-top: 10px;
-            max-width: 600px;
-            font-size: clamp(10px, 3vw, 20px);
-            margin: 15px 0px;
-        }
+    h1 {
+      width: 100%;
+      max-width: 700px;
+      font-size: clamp(18px, 6vw, 40px);
     }
-
+    p {
+      width: 90%;
+      margin-top: 10px;
+      max-width: 600px;
+      font-size: clamp(10px, 3vw, 20px);
+      margin: 15px 0px;
+    }
+  }
 }

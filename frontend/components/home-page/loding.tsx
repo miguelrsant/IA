@@ -3,41 +3,40 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function Logind() {
-
-    useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
-    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
 
     if (scrollBarWidth > 0) {
-        document.documentElement.style.marginRight = `${scrollBarWidth}px`;
+      document.documentElement.style.marginRight = `${scrollBarWidth}px`;
     }
 
     document.documentElement.style.overflow = "hidden";
 
     gsap.fromTo(
-        ".loging-page",
-        { opacity: 1 },
-        {
+      ".loging-page",
+      { opacity: 1 },
+      {
         opacity: 0,
         duration: 1.5,
         delay: 1.9,
-        display: 'none',
+        display: "none",
         onComplete: () => {
-            document.documentElement.style.overflow = "auto";
-            document.documentElement.style.marginRight = "0px";
-        }
-        }
+          document.documentElement.style.overflow = "auto";
+          document.documentElement.style.marginRight = "0px";
+        },
+      }
     );
 
     return () => {
-        document.documentElement.style.overflow = "auto";
-        document.documentElement.style.marginRight = "0px";
+      document.documentElement.style.overflow = "auto";
+      document.documentElement.style.marginRight = "0px";
     };
-    }, []);
+  }, []);
 
   return (
     <div className="loging-page">
-
       <svg
         className="loding-svg"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +59,6 @@ export default function Logind() {
           />
         </g>
       </svg>
-
     </div>
   );
 }
