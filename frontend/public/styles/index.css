@@ -118,7 +118,8 @@
 
 .cards-escolher {
   padding: 1%;
-  width: 80%;
+  width: 95%;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -375,8 +376,8 @@
 }
 
 .cartao-negocio {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 750px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   min-height: 260px;

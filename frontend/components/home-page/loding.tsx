@@ -5,15 +5,13 @@ import { gsap } from "gsap";
 export default function Logind() {
 
     useEffect(() => {
-    // captura a largura da página ANTES do scroll sumir
+
     const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
 
-    // trava a largura para evitar o pulo
     if (scrollBarWidth > 0) {
         document.documentElement.style.marginRight = `${scrollBarWidth}px`;
     }
 
-    // bloqueia o scroll
     document.documentElement.style.overflow = "hidden";
 
     gsap.fromTo(
@@ -23,11 +21,9 @@ export default function Logind() {
         opacity: 0,
         duration: 1.5,
         delay: 1.9,
+        display: 'none',
         onComplete: () => {
-            // libera scroll
             document.documentElement.style.overflow = "auto";
-
-            // remove o margin-right
             document.documentElement.style.marginRight = "0px";
         }
         }
