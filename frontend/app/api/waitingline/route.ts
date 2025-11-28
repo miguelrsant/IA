@@ -4,7 +4,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const backendRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/waitingline/`, {
+    const backendRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/waitingline`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
