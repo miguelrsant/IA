@@ -17,7 +17,7 @@ export default function Page() {
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
 
     try {
-      const res = await fetch(`/api/waitingline`, {
+      const res = await fetch(`/api/waitingline/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
