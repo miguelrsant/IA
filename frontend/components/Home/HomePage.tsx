@@ -19,7 +19,7 @@ export default function Home() {
           pin: ".home",
           scrub: true,
         },
-      }
+      },
     );
     gsap.fromTo(
       ".taylor-principal",
@@ -33,7 +33,7 @@ export default function Home() {
           pin: ".home",
           scrub: true,
         },
-      }
+      },
     );
     gsap.fromTo(
       ".taylor-secundario ",
@@ -47,7 +47,7 @@ export default function Home() {
           pin: ".home",
           scrub: true,
         },
-      }
+      },
     );
     gsap.fromTo(
       ".taylor-paragrafo ",
@@ -61,7 +61,7 @@ export default function Home() {
           pin: ".home",
           scrub: true,
         },
-      }
+      },
     );
     gsap.fromTo(
       ".bt-home",
@@ -76,7 +76,7 @@ export default function Home() {
           pin: ".home",
           scrub: true,
         },
-      }
+      },
     );
     gsap.fromTo(
       ".vantagens",
@@ -90,7 +90,7 @@ export default function Home() {
           pin: ".home",
           scrub: true,
         },
-      }
+      },
     );
   }, []);
 

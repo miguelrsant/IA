@@ -4,6 +4,7 @@ from services.auth.me_services import auth_required
 
 me_route = Blueprint("me", __name__)
 
+
 @me_route.route("/me", methods=["GET"])
 @auth_required
 def get_me(user_id):

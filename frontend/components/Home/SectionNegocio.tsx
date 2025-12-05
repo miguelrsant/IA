@@ -18,7 +18,7 @@ export default function Negocio() {
         scrollTrigger: {
           trigger: ".cartao-negocio",
         },
-      }
+      },
     );
     gsap.fromTo(
       ".text-cartao-negocio",
@@ -30,7 +30,7 @@ export default function Negocio() {
         scrollTrigger: {
           trigger: ".cartao-negocio",
         },
-      }
+      },
     );
     gsap.fromTo(
       ".btn-negocio",
@@ -42,7 +42,7 @@ export default function Negocio() {
         scrollTrigger: {
           trigger: ".cartao-negocio",
         },
-      }
+      },
     );
   }, []);
   return (

@@ -3,8 +3,10 @@ from sqlalchemy.sql import func
 import random
 import string
 
+
 def generate_id():
     return ''.join(random.choices(string.digits, k=7))
+
 
 class Waitingline(db.Model):
     id = db.Column(db.String(7), primary_key=True, default=generate_id)

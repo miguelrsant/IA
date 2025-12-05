@@ -26,3 +26,7 @@ restart: kill-ports
 	docker compose down -v &
 	docker system prune -a --force &
 	docker volume prune -a --force
+
+format:
+	cd backend && pdm run autopep8 --in-place --recursive . 
+	cd frontend && npm run lint:fix

@@ -13,6 +13,7 @@ def create_app():
     init_database(app)
     from database.models import User
     from database.models import Waitingline
+    from database.models import Sessions
 
     from routes.status import status_bp
     app.register_blueprint(status_bp)

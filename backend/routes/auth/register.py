@@ -9,7 +9,7 @@ def index():
     data = request.get_json()
 
     name = data["name"]
-    email  = data["email"]
+    email = data["email"]
     password = data["password"]
 
-    return  CreateRegister(name, email, password)
+    return CreateRegister(name, email, password)

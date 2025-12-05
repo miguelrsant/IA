@@ -17,10 +17,10 @@ def AcessLogin(email: str, password: str):
 
     if not user:
         return jsonify({"msg": "Invalid credentials"}), 401
-    
+
     if not bcrypt.checkpw(password.encode("utf-8"), user.password.encode("utf-8")):
         return jsonify({"msg": "Invalid credentials"}), 401
-    
+
     expire = datetime.now(timezone.utc) + timedelta(minutes=EXPIRES_MINUTES)
 
     payload = {
