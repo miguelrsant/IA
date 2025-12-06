@@ -2,6 +2,8 @@ from flask import jsonify
 import bcrypt
 from database.connection import db
 from database.models.user import User
+from core.email_client import email_client
+from services.auth.singin_services import AcessLogin
 
 
 def CreateRegister(name: str, email: str, password: str):
@@ -22,4 +24,22 @@ def CreateRegister(name: str, email: str, password: str):
     db.session.add(user)
     db.session.commit()
 
-    return jsonify({"msg": "User created"}), 201
+    html_content = f"""
+    <h1>Obrigado por se registrar no Taylor!</h1>
+    <p>Olá <strong>{user.name}</strong>,</p>
+    <p>Seu cadastro foi realizado com sucesso. Em breve você receberá novidades e atualizações diretamente no seu e-mail.</p>
+    <p>— Equipe Taylor</p>
+    """
+
+    try:
+        email_client.send_email(
+            to=user.email,
+            subject="Você agora está no TAYLOR",
+            html=html_content
+        )
+    except Exception as email_error:
+        print(f"Erro ao enviar email: {email_error}")
+
+    token = AcessLogin(email, password)[0].json['token']
+
+    return jsonify({"msg": "User created", "token": token}), 201
